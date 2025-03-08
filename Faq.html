@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - SPMB UNP 2025</title>
+  <link rel="stylesheet" href="spmb.css">
+  <style>
+    /* CSS khusus FAQ */
+    .faq-container {
+      max-width: 800px;
+      margin: 20px auto;
+      background: #fff;
+      border-radius: 8px;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    .faq-item {
+      border-bottom: 1px solid #ccc;
+      padding: 10px 0;
+    }
+    .faq-item:last-child {
+      border-bottom: none;
+    }
+    .faq-question {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      cursor: pointer;
+      padding: 10px;
+      background: #e7e7e7;
+      border-radius: 4px;
+    }
+    .faq-question h3 {
+      margin: 0;
+      font-size: 18px;
+    }
+    .toggle-icon::after {
+      content: "+";
+      font-size: 24px;
+      line-height: 1;
+    }
+    .faq-item.active .toggle-icon::after {
+      content: "-";
+    }
+    .faq-answer {
+      display: none;
+      padding: 10px;
+      border-left: 3px solid #003366;
+      margin-top: 5px;
+    }
+    .faq-item.active .faq-answer {
+      display: block;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+    <div class="header-content">
+      <h1 class="header-title">Seleksi Penerimaan Mahasiswa Baru<br>Universitas Negeri Padang 2025</h1>
+      <img src="unp.png" alt="Logo UNP" class="logo-unp">
+    </div>
+  </header>
+
+  <nav class="sidebar">
+    <ul>
+      <li><a href="Beranda.html" class="active">Beranda</a></li>
+      <li><a href="Informasi.html">Informasi</a></li>
+      <li><a href="Pendaftaran.html">Pendaftaran</a></li>
+      <li><a href="faq.html">FAQ</a></li>
+    </ul>
+  </nav>
+
+  <main>
+    <div class="faq-container">
+      <!-- FAQ Item 1 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>Informasi Umum Seleksi Perguruan Tinggi</h3>
+          <span class="toggle-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <h3>1. Ada berapa jalur penerimaan di perguruan tinggi negeri tahun 2024?</h3>
+            <p>Penerimaan di PTN ada 3 jalur, yaitu:<br>
+            1. Seleksi Nasional Berdasarkan Prestasi (SNBP)<br>
+            2. Seleksi Nasional Berdasarkan Tes (SNBT)<br>
+            3. Mandiri yang diselenggarakan oleh PTN atau beberapa PTN secara independen</p>
+        <h3>2. Apa saja ruang lingkup penerimaan mahasiswa baru melalui jalur SNBP, SNBT, dan MANDIRI?</h3>
+            <p>Ruang lingkup penerimaan mahasiswa jalur SNBP, SNBT, dan MANDIRI terdiri atas 3 program yaitu Sarjana, Diploma Empat/Sarjana Terapan, dan Diploma Tiga</p>
+        </div>
+      </div>
+      <!-- FAQ Item 2 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>Bagaimana cara mendaftar di SPMB UNP 2025?</h3>
+          <span class="toggle-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            <h3>Untuk mendaftar di SPMB UNP 2025, ikuti langkah-langkah berikut:</h3>
+            1. Kunjungi website resmi SPMB UNP 2025 dan klik menu “Pendaftaran”.<br>
+            2. Isi formulir pendaftaran dengan data pribadi, pendidikan, dan informasi lainnya secara lengkap dan akurat.<br>
+            3. Unggah dokumen pendukung seperti ijazah, KTP, pas foto terbaru, dan dokumen lain sesuai persyaratan.<br>
+            4. Verifikasi kembali seluruh data yang telah diisi, lalu klik tombol “Submit”.<br>
+            5. Pantau email dan pengumuman resmi dari UNP untuk informasi selanjutnya mengenai proses seleksi.<br><br>
+            Pastikan semua informasi dan dokumen yang diunggah sudah benar agar proses pendaftaran berjalan lancar.
+          </p>
+        </div>
+      </div>
+      
+      <!-- FAQ Item 3 -->
+      <div class="faq-item">
+        <div class="faq-question" onclick="toggleFAQ(this)">
+          <h3>Apa saja persyaratan untuk mengikuti SPMB UNP 2025?</h3>
+          <span class="toggle-icon"></span>
+        </div>
+        <div class="faq-answer">
+          <p>
+            <h3>Persyaratan untuk mengikuti SPMB UNP 2025 meliputi:</h3>
+            1. Ijazah atau Surat Keterangan Lulus dari SMA/sederajat.<br>
+            2. KTP atau identitas resmi lainnya.<br>
+            3. Pas foto terbaru (ukuran 3x4).<br>
+            4. Dokumen pendukung seperti rapor dan sertifikat prestasi (jika ada).<br>
+            5. Bukti pembayaran pendaftaran .<br><br>
+            Pastikan semua dokumen diunggah dalam format yang sesuai dan data yang diisi akurat.
+          </p>
+        </div>
+      </div>
+      
+  
+  <footer>
+    <p>&copy; 2025 Universitas Negeri Padang | Designed by Zahran</p>
+    <marquee><font color="white" face="arial">Selamat Datang calon mahasiswa baru Universitas Negeri Padang,
+    Semoga kamu berhasil lolos seleksi dan menjadi bagian dari keluarga besar UNP. Aamiin.</font></marquee>
+  </footer>
+
+  <script>
+    // Fungsi toggle untuk menu sidebar
+    function toggleMenu() {
+      document.querySelector('.sidebar').classList.toggle('active');
+    }
+    
+    // Fungsi toggle FAQ
+    function toggleFAQ(element) {
+      const faqItem = element.parentElement;
+      faqItem.classList.toggle('active');
+    }
+  </script>
+  
+</body>
+</html>
