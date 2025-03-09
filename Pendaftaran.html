@@ -1,0 +1,507 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Pendaftaran SPMB UNP 2025</title>
+    <link rel="stylesheet" href="spmb.css">
+    <script defer src="script.js"></script>
+</head>
+<body>
+    <header>
+        <div class="menu-icon" onclick="toggleMenu()">&#9776;</div>
+        <div class="header-content">
+        <h1 class="header-title">Seleksi Penerimaan Mahasiswa Baru<br> Universitas Negeri Padang 2025</h1>
+        <img src="unp.png" alt="Logo UNP" class="logo-unp">
+        </div>
+    </header>
+
+    <nav class="sidebar">
+        <ul>
+            <li><a href="index.html" class="active">Beranda</a></li>
+            <li><a href="Informasi.html">Informasi</a></li>
+            <li><a href="Pendaftaran.html">Pendaftaran</a></li>
+            <li><a href="Faq.html">FAQ</a></li>
+        </ul>
+    </nav>
+
+    <script src="script.js"></script>
+    
+    <!DOCTYPE html>
+    <html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Form Pendaftaran SPMB UNP 2025</title>
+        <style>
+            body {
+                font-family: Arial, sans-serif;
+                background-color: #f4f4f4;
+                margin: 0;
+                padding: 0;
+            }
+            .container {
+                width: 50%;
+                margin: 20px auto;
+                background: white;
+                padding: 20px;
+                border-radius: 8px;
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            }
+            h2 {
+                text-align: center;
+                color: #003366;
+            }
+            label {
+                font-weight: bold;
+            }
+            input, select, textarea {
+                width: 100%;
+                padding: 8px;
+                margin-top: 5px;
+                margin-bottom: 15px;
+                border: 1px solid #ccc;
+                border-radius: 5px;
+            }
+            .buttons {
+                display: flex;
+                justify-content: space-between;
+            }
+            button {
+                padding: 10px 15px;
+                border: none;
+                border-radius: 5px;
+                cursor: pointer;
+                font-size: 16px;
+            }
+            .prev-btn {
+                background: #999;
+                color: white;
+            }
+            .next-btn {
+                background: #003366;
+                color: white;
+            }
+            .prev-btn:hover {
+                background: #777;
+            }
+            .next-btn:hover {
+                background: #002244;
+            }
+            .step {
+                display: none;
+            }
+            .step.active {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+    
+    <div class="container">
+        <h2>Form Pendaftaran SPMB UNP 2025</h2>
+        
+        <form id="multiStepForm">
+            
+            <!-- STEP 1: Informasi Pribadi -->
+            <div class="step active">
+                <h3>Informasi Pribadi</h3>
+                <label>Nama Lengkap:</label>
+                <input type="text" name="nama" required>
+                <label>Tempat dan Tanggal Lahir:</label>
+                <input type="text" name="ttl" required>
+                <label>Jenis Kelamin:</label>
+                <select name="jenis_kelamin">
+                    <option value="Laki-laki">Laki-laki</option>
+                    <option value="Perempuan">Perempuan</option>
+                </select>
+                <label>Agama:</label>
+                <select name="agama">
+                    <option value="Islam">Islam</option>
+                    <option value="Kristen">Kristen</option>
+                    <option value="Katolik">Katolik</option>
+                    <option value="Hindu">Hindu</option>
+                    <option value="Buddha">Buddha</option>
+                    <option value="Konghucu">Konghucu</option>
+                </select>
+                <label>Alamat Lengkap dan Kode Pos:</label>
+                <textarea name="alamat" required></textarea>
+                <label>Nomor Telepon:</label>
+                <input type="tel" name="telepon" required>
+                <label>Alamat Email:</label>
+                <input type="email" name="email" required>
+                <label>Nomor Induk Kependudukan (NIK):</label>
+                <input type="text" name="nik" required>
+                <div class="buttons">
+                    <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+    
+            <!-- STEP 2: Informasi Pendidikan -->
+            <div class="step">
+                <h3>Informasi Pendidikan</h3>
+                <label for="sekolah">Asal Sekolah (SMA/SMK/MA):</label>
+                <input type="text" id="sekolah" name="sekolah" required>
+            
+                <label for="jurusan">Jurusan di SMA/SMK:</label>
+                <select id="jurusan" name="jurusan" required>
+                    <option value="IPA">IPA</option>
+                    <option value="IPS">IPS</option>
+                    <option value="Bahasa">Bahasa</option>
+                    <option value="Agama">Agama</option>
+                    <option value="Seni">Seni</option>
+                    <option value="Keolahragaan">Keolahragaan</option>
+                    <option value="TKJ">TKJ</option>
+                    <option value="RPL">RPL</option>
+                    <option value="Multimedia">Multimedia</option>
+                    <option value="Teknik Mesin">Teknik Mesin</option>
+                    <option value="Teknik Elektro">Teknik Elektro</option>
+                    <option value="Tata Busana">Tata Busana</option>
+                    <option value="Perhotelan">Perhotelan</option>
+                    <option value="Pariwisata">Pariwisata</option>
+                    <option value="Farmasi">Farmasi</option>
+                    <option value="Kesehatan">Kesehatan</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+            
+                <label for="jurusan_lainnya" id="label_jurusan_lainnya" style="display: none;">Jurusan Lainnya:</label>
+                <input type="text" id="jurusan_lainnya" name="jurusan_lainnya" style="display: none;">
+            
+                <label for="tahun_masuk">Tahun Masuk:</label>
+                <input type="number" id="tahun_masuk" name="tahun_masuk" required>
+            
+                <label for="tahun_lulus">Tahun Lulus:</label>
+                <input type="number" id="tahun_lulus" name="tahun_lulus" required>
+            
+                <label for="nilai">Nilai Ujian Nasional / Rapor:</label>
+                <input type="text" id="nilai" name="nilai" required>
+            
+                <div class="buttons">
+                    <button type="button" class="prev-btn" onclick="prevStep()">Previous</button>
+                    <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+            
+            <script>
+                const jurusanDropdown = document.getElementById('jurusan');
+                const jurusanLainnyaInput = document.getElementById('jurusan_lainnya');
+                const jurusanLainnyaLabel = document.getElementById('label_jurusan_lainnya');
+            
+                jurusanDropdown.addEventListener('change', function() {
+                    if (this.value === 'Lainnya') {
+                        jurusanLainnyaInput.style.display = 'block';
+                        jurusanLainnyaLabel.style.display = 'block';
+                    } else {
+                        jurusanLainnyaInput.style.display = 'none';
+                        jurusanLainnyaLabel.style.display = 'none';
+                    }
+                });
+            </script>
+    
+            <!-- STEP 3: Informasi Orang Tua -->
+            <div class="step">
+                <h3>Informasi Orang Tua</h3>
+                <h4>Informasi Ayah:</h4>
+                <label>Nama Ayah:</label>
+                <input type="text" name="nama_ayah" required>
+                <label>Tempat dan Tanggal Lahir Ayah:</label>
+                <input type="text" name="ttl" required>
+                <label>Nomor HP Ayah:</label>
+                <input type="tel" name="no_hp_ayah" required>
+                <label>Pendidikan Terakhir Ayah:</label>
+                <select name="pendidikan_ayah" required>
+                    <option value="Tidak Sekolah">Tidak Sekolah</option>
+                    <option value="SD/Sederajat">SD/Sederajat</option>
+                    <option value="SMP/Sederajat">SMP/Sederajat</option>
+                    <option value="SMA/Sederajat">SMA/Sederajat</option>
+                    <option value="SMK/Sederajat">SMK/Sederajat</option>
+                    <option value="Diploma 1 (D1)">Diploma 1 (D1)</option>
+                    <option value="Diploma 2 (D2)">Diploma 2 (D2)</option>
+                    <option value="Diploma 3 (D3)">Diploma 3 (D3)</option>
+                    <option value="Diploma 4 (D4)">Diploma 4 (D4)</option>
+                    <option value="Sarjana (S1)">Sarjana (S1)</option>
+                    <option value="Magister (S2)">Magister (S2)</option>
+                    <option value="Doktor (S3)">Doktor (S3)</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+                <label>Pekerjaan Ayah:</label>
+                <select name="pekerjaan_ayah" required>
+                    <option value="Wiraswasta">Wiraswasta</option>
+                    <option value="Wirausaha">Wirausaha</option>
+                    <option value="PNS">PNS (Pegawai Negeri Sipil)</option>
+                    <option value="TNI">TNI (Tentara Nasional Indonesia)</option>
+                    <option value="POLRI">POLRI (Kepolisian Republik Indonesia)</option>
+                    <option value="Guru">Guru</option>
+                    <option value="Dosen">Dosen</option>
+                    <option value="Dokter">Dokter</option>
+                    <option value="Perawat">Perawat</option>
+                    <option value="Apoteker">Apoteker</option>
+                    <option value="Pengacara">Pengacara</option>
+                    <option value="Notaris">Notaris</option>
+                    <option value="Akuntan">Akuntan</option>
+                    <option value="Arsitek">Arsitek</option>
+                    <option value="Insinyur">Insinyur</option>
+                    <option value="Programmer">Programmer</option>
+                    <option value="Desainer Grafis">Desainer Grafis</option>
+                    <option value="Jurnalis">Jurnalis</option>
+                    <option value="Penulis">Penulis</option>
+                    <option value="Seniman">Seniman</option>
+                    <option value="Musisi">Musisi</option>
+                    <option value="Atlet">Atlet</option>
+                    <option value="Petani">Petani</option>
+                    <option value="Nelayan">Nelayan</option>
+                    <option value="Pedagang">Pedagang</option>
+                    <option value="Sopir">Sopir</option>
+                    <option value="Buruh">Buruh</option>
+                    <option value="Karyawan Swasta">Karyawan Swasta</option>
+                    <option value="Manajer">Manajer</option>
+                    <option value="Supervisor">Supervisor</option>
+                    <option value="Konsultan">Konsultan</option>
+                    <option value="Sales/Marketing">Sales/Marketing</option>
+                    <option value="Teknisi">Teknisi</option>
+                    <option value="Analis">Analis</option>
+                    <option value="Editor">Editor</option>
+                    <option value="Kurir">Kurir</option>
+                    <option value="Koki">Koki</option>
+                    <option value="Pelayan">Pelayan</option>
+                    <option value="Pemandu Wisata">Pemandu Wisata</option>
+                    <option value="Pilot">Pilot</option>
+                    <option value="Pramugara/Pramugari">Pramugara/Pramugari</option>
+                    <option value="Masinis">Masinis</option>
+                    <option value="Nahkoda">Nahkoda</option>
+                    <option value="Agen Asuransi">Agen Asuransi</option>
+                    <option value="Agen Properti">Agen Properti</option>
+                    <option value="Fotografer">Fotografer</option>
+                    <option value="Videografer">Videografer</option>
+                    <option value="Instruktur Olahraga">Instruktur Olahraga</option>
+                    <option value="Penterjemah">Penterjemah</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+                <label for="pekerjaan_ayah" id="label_pekerjaan_ayah" style="display: none;">Pekerjaan Lainnya:</label>
+                <input type="text" id="pekerjaan_ayah" name="pekerjaan_ayah" style="display: none;">
+                <label>Alamat Lengkap dan Kode Pos:</label>
+                <textarea name="alamat" required></textarea>
+                <label for="pendapatan_ayah">Pendapatan Ayah (Rupiah):</label>
+                <input type="number" id="pendapatan_ayah" name="pendapatan_ayah" min="0" placeholder="Rp. 0" required>
+                <h4>Informasi Ibu:</h4>
+                <label>Nama Ibu:</label>
+                <input type="text" name="nama_ibu" required>
+                <label>Tempat dan Tanggal Lahir Ibu:</label>
+                <input type="text" name="ttl" required>
+                <label>Nomor HP Ibu:</label>
+                <input type="tel" name="no_hp_ibu" required>
+                <label>Pendidikan Terakhir Ibu</label>
+                <select name="pendidikan_ibu" required>
+                    <option value="Tidak Sekolah">Tidak Sekolah</option>
+                    <option value="SD/Sederajat">SD/Sederajat</option>
+                    <option value="SMP/Sederajat">SMP/Sederajat</option>
+                    <option value="SMA/Sederajat">SMA/Sederajat</option>
+                    <option value="SMK/Sederajat">SMK/Sederajat</option>
+                    <option value="Diploma 1 (D1)">Diploma 1 (D1)</option>
+                    <option value="Diploma 2 (D2)">Diploma 2 (D2)</option>
+                    <option value="Diploma 3 (D3)">Diploma 3 (D3)</option>
+                    <option value="Diploma 4 (D4)">Diploma 4 (D4)</option>
+                    <option value="Sarjana (S1)">Sarjana (S1)</option>
+                    <option value="Magister (S2)">Magister (S2)</option>
+                    <option value="Doktor (S3)">Doktor (S3)</option>
+                    <option value="Lainnya">Lainnya</option>
+                </select>
+                <label>Pekerjaan Ibu:</label>
+                <select name="pekerjaan_ibu" required>
+                        <option value="Ibu Rumah Tangga">Ibu Rumah Tangga</option>
+                        <option value="Guru">Guru</option>
+                        <option value="Dosen">Dosen</option>
+                        <option value="Dokter">Dokter</option>
+                        <option value="Perawat">Perawat</option>
+                        <option value="Bidan">Bidan</option>
+                        <option value="Apoteker">Apoteker</option>
+                        <option value="Pengacara">Pengacara</option>
+                        <option value="Notaris">Notaris</option>
+                        <option value="Akuntan">Akuntan</option>
+                        <option value="Arsitek">Arsitek</option>
+                        <option value="Insinyur">Insinyur</option>
+                        <option value="Programmer">Programmer</option>
+                        <option value="Desainer Grafis">Desainer Grafis</option>
+                        <option value="Jurnalis">Jurnalis</option>
+                        <option value="Penulis">Penulis</option>
+                        <option value="Seniman">Seniman</option>
+                        <option value="Musisi">Musisi</option>
+                        <option value="Atlet">Atlet</option>
+                        <option value="Pedagang">Pedagang</option>
+                        <option value="Karyawan Swasta">Karyawan Swasta</option>
+                        <option value="Manajer">Manajer</option>
+                        <option value="Supervisor">Supervisor</option>
+                        <option value="Konsultan">Konsultan</option>
+                        <option value="Sales/Marketing">Sales/Marketing</option>
+                        <option value="Teknisi">Teknisi</option>
+                        <option value="Analis">Analis</option>
+                        <option value="Editor">Editor</option>
+                        <option value="Kurir">Kurir</option>
+                        <option value="Koki">Koki</option>
+                        <option value="Pelayan">Pelayan</option>
+                        <option value="Pemandu Wisata">Pemandu Wisata</option>
+                        <option value="Pilot">Pilot</option>
+                        <option value="Pramugari">Pramugari</option>
+                        <option value="Masinis">Masinis</option>
+                        <option value="Nahkoda">Nahkoda</option>
+                        <option value="Agen Asuransi">Agen Asuransi</option>
+                        <option value="Agen Properti">Agen Properti</option>
+                        <option value="Fotografer">Fotografer</option>
+                        <option value="Videografer">Videografer</option>
+                        <option value="Instruktur Olahraga">Instruktur Olahraga</option>
+                        <option value="Penterjemah">Penterjemah</option>
+                        <option value="Penjahit">Penjahit</option>
+                        <option value="Perias">Perias</option>
+                        <option value="Pengasuh Anak">Pengasuh Anak</option>
+                        <option value="Terapis">Terapis</option>
+                        <option value="Pustakawan">Pustakawan</option>
+                        <option value="Peneliti">Peneliti</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                    <label for="pekerjaan_ibu" id="label_pekerjaan_ibu" style="display: none;">Pekerjaan Lainnya:</label>
+                    <input type="text" id="pekerjaan_ibu" name="pekerjaan_ibu" style="display: none;">
+                    <label>Alamat Lengkap dan Kode Pos:</label>
+                    <textarea name="alamat" required></textarea>
+                    <label for="pendapatan_ibu">Pendapatan Ibu (Rupiah):</label>
+                    <input type="number" id="pendapatan_ibu" name="pendapatan_ibu" min="0" placeholder="Rp. 0" required>
+                <div class="buttons">
+                    <button type="button" class="prev-btn" onclick="prevStep()">Previous</button>
+                    <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+
+    
+            <!-- STEP 4: Pilihan Program Studi -->
+            <div class="step">
+                <h3>Pilihan Fakultas & Program Studi</h3>
+
+                <label for="Fakultas">Fakultas:</label>
+                <select id="Fakultas" onchange="updateProdi()" required>
+                    <option value="">Pilih Fakultas</option>
+                    <option value="FT" >Fakultas Teknik</option>
+                    <option value="FBS" >Fakultas Bahasa dan Seni</option>
+                    <option value="FMIPA" >Fakultas Matematika dan Pengetahuan Alam</option>
+                    <option value="FIP" >Fakultas Ilmu Pendidikan</option>
+                    <option value="FIK" >Fakultas Ilmu Keolahragaan</option>
+                    <option value="FEB" >Fakultas Ekonomi dan Bisnis</option>
+                    <option value="FPP" >Fakultas Pariwisata dan Perhotelan</option>
+                    <option value="FIS" >Fakultas Ilmu Sosial</option>
+                    <option value="FPK" >Fakultas Psikologi dan Kesehatan</option>
+                    <option value="FK" >Fakultas Kedokteran</option>
+                </select>
+
+                <label for="Prodi">Program Studi:</label>
+                <select id="Prodi" name="prodi" required>
+                    <option value="">Pilih Program Studi</option>
+                </select>
+
+                <label for="jalur_masuk">Pilihan Jalur Masuk</label>
+                <select name="jalur_masuk" required>
+                    <option value="Reguler">Reguler</option>
+                    <option value="Prestasi">Prestasi</option>
+                </select>
+
+                <div class="buttons">
+                    <button type="button" class="prev-btn" onclick="prevStep()">Previous</button>
+                    <button type="button" class="next-btn" onclick="nextStep()">Next</button>
+                </div>
+            </div>
+
+            <script>
+                function updateProdi() {
+                    let fakultas = document.getElementById("Fakultas").value;
+                    let prodi = document.getElementById("Prodi");
+
+                    prodi.innerHTML = "<option value=''>Pilih Program Studi</option>";
+
+                    let prodiOptions = {
+                        "FT": ["Pendidikan Teknik Bangunan (S1)", "Pendidikan Teknik Elektro (S1)", "Pendidikan Teknik Mesin (S1)",
+                            "Pendidikan Teknik Sipil (S1)", "Pendidikan Teknik Informatika (S1)", "Pendidikan Teknik Otomotif (S1)",
+                            "Pendidikan Teknik Elektronika (S1)", "Teknik Pertambangan (S1)", "Teknik Sipil (S1)", "Teknik Mesin (S1)",
+                            "Informatika (S1)", "Teknik Elektro (S1)", "Teknik Geologi (S1)"],
+                        "FBS": ["Pendidikan Bahasa Inggris (S1)", "Pendidikan Bahasa dan Sastra (S1)", "Pendidikan Seni Rupa (S1)",
+                            "Desain Komunikasi Visual (S1)", "Pendidikan Seni Drama, Tari, dan Musik (S1)", "Pendidikan Bahasa Jepang (S1)",
+                            "Perpustakaan dan Ilmu Informasi (S1)", "Pendidikan Musik (S1)", "Sastra Indonesia (S1)", "Sastra Inggris (S1)",
+                            "Pendidikan Tari (S1)"],
+                        "FMIPA": ["Biologi (S1)", "Fisika (S1)", "Kimia (S1)", "Matematika (S1)", "Pendidikan Biologi (S1)", "Pendidikan Fisika (S1)", 
+                            "Pendidikan Kimia (S1)", "Pendidikan Matematika (S1)", "Pendidikan Ilmu Pengetahuan Alam (S1)", "Statistika (S1)",
+                            "Agrobisnis (S1)", "Agroteknologi (S1)", "Peternakan (S1)", "Ilmu Lingkungan (S1)", "Ilmu Aktuaria (S1)"],
+                        "FIP": ["Administrasi Pendidikan (S1)", "Bimbingan Dan Konseling (S1)", "Pendidikan Guru Pendidikan Anak Usia Dini (S1)", 
+                            "Pendidikan Guru Sekolah Dasar (S1)", "Pendidikan Luar Biasa (S1)", "Pendidikan Non Formal (S1)",
+                             "Kurikulum dan Teknologi Pendidikan (S1)"],
+                        "FIK": ["Ilmu Keolahragaan (S1)", "Pendidikan Kepelatihan Olahraga (S1)", "Pendidikan Jasmani Rekreasi dan Olahraga (S1)"],
+                        "FEB": ["Akuntansi (S1)", "Ekonomi Pembangunan (S1)", "Manajemen (S1)", "Pendidikan Ekonomi (S1)", "Bisnis Digital (S1)",
+                             "Ekonomi Keuangan Islam (S1)", "Manajemen Bisnis Syariah (S1)"],
+                        "FPP": ["Pendidikan Kesejahteraan Keluarga (S1)", "Pariwisata (S1)", "Pendidikan Vokasional Seni Kuliner (S1)", 
+                            "Pendidikan Vokasional Desain Fashion (S1)"],
+                        "FIS": ["Geografi (S1)", "Ilmu Administrasi Negara (S1)", "Pendidikan Geografi (S1)", "Pendidikan Pancasila dan Kewarganegaraan (S1)", 
+                            "Pendidikan Sejarah (S1)", "Pendidikan Sosiologi (S1)", "Pendidikan Keagamaan Islam (S1)", "Pendidikan Ilmu Pengetahuan Sosial (S1)", 
+                            "Ilmu Komunikasi (S1)", "Ilmu Hukum (S1)", "Antropologi (S1)"],
+                        "FPK": ["Psikologi (S1)", "Keperawatan (S1)"],
+                        "FK": ["Kedokteran (S1)", "Kedokteran Hewan (S1)"] 
+                    };
+                    if (fakultas in prodiOptions) {
+                        prodiOptions[fakultas].forEach(function(prodiName) {
+                            let option = document.createElement("option");
+                            option.value = prodiName.toLowerCase().replace(/\s/g, "-");
+                            option.textContent = prodiName;
+                            prodi.appendChild(option);
+                        })
+                    }
+                }
+            </script>
+    
+            <!-- STEP 5: Dokumen Pendukung -->
+            <div class="step">
+                <h3>Dokumen Pendukung</h3>
+                <label>Scan/Fotokopi Ijazah:</label>
+                <input type="file" name="ijazah" accept="image/*,.pdf" required>
+                <label>Scan/Fotokopi KTP:</label>
+                <input type="file" name="ktp" accept="image/*,.pdf" required>
+                <label>Scan/Fotokopi Kartu Keluarga (KK):</label>
+                <input type="file" name="kk" accept="image/*,.pdf" required>
+                <label>Nilai Rapor Semester 1 S.d 5</label>
+                <input type="file" name="rapor" accept="image/*,.pdf" required>
+                <label>Pas Foto Terbaru:</label>
+                <input type="file" name="foto" accept="image/*" required>
+                <label>Scan Dokumen Pendukung Lainnya (Sertifikat, Piala, Dll)</label>
+                <input type="file" name="dokumen_lainnya" accept="image/*,.pdf" required>
+
+                <div class="buttons">
+                    <button type="button" class="prev-btn" onclick="prevStep()">Previous</button>
+                    <button type="submit" class="next-btn">Submit</button>
+                </div>
+            </div>
+    
+        </form>
+    </div>
+    
+    <script>
+        let currentStep = 0;
+        const steps = document.querySelectorAll(".step");
+    
+        function showStep(stepIndex) {
+            steps.forEach((step, index) => {
+                step.classList.toggle("active", index === stepIndex);
+            });
+        }
+    
+        function nextStep() {
+            if (currentStep < steps.length - 1) {
+                currentStep++;
+                showStep(currentStep);
+            }
+        }
+    
+        function prevStep() {
+            if (currentStep > 0) {
+                currentStep--;
+                showStep(currentStep);
+            }
+        }
+    </script>
+    
+    </body>
+    </html>
+    
